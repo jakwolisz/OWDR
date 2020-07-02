@@ -1,0 +1,52 @@
+#about_us {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about_section_right, .about_section_left {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+
+.about_section_left {
+    background-color: $whitish_color;
+}
+
+.content_wrapper {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.about_section_right {
+    height: 100vh;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(../../../assets/People.jpg);
+    background-size: cover;
+}
+
+
+@media (max-width: 1000px) {
+    #about_us {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    }
+
+    .about_section_right, .about_section_left {
+        width: 100%;
+    }
+}
+
+

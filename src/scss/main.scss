@@ -1,3 +1,15 @@
+@import "./settings/reset";
+@import "./settings/fonts";
+@import "./settings/colors";
+
+@import "./layout/header/header";
+@import "./layout/three_columns/three_columns";
+@import "./layout/simple_steps/simple_steps";
+@import "./layout/about_us/about_us";
+
+
+
 body {
-    background-color: yellow;
+    font-family: $open-sans;
 }
+

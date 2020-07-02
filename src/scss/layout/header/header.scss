@@ -1,0 +1,105 @@
+.header {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-evenly;
+    background-image: url(../../../assets/Home-Hero-Image.jpg);
+    background-position: -300px;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.navigation_wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-start;
+    padding: 30px 50px;
+}
+
+.header_nav {
+    margin-bottom: 10px;
+    text-align: right;
+    ul li {
+        padding: 10px;
+        margin-left: 10px;
+        display: inline-block;
+        border: 1px solid transparent;
+        a {
+            text-decoration: none;
+            color: black;
+        }
+        &:hover {
+          color: #666;
+          border: 1px solid black;
+        }
+    }
+}
+
+.user_nav {
+    margin-bottom: 10px;
+    ul li {
+        padding: 10px;
+        margin-left: 10px;
+        display: inline-block;
+        border: 1px solid transparent;
+        a {
+            text-decoration: none;
+            color: black;
+        }
+        &:hover {
+          color: #666;
+          border: 1px solid black;
+        }
+  }
+}
+
+.main_section_right { 
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+
+.content {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    p {
+        font-size: 30px;
+        margin: 10px 0px;
+    }
+    img {
+        padding-top:25px;
+    }
+}
+
+.buttons_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+    button {
+        width: 200px;
+        font-size: 25px;
+        margin-left: 20px;
+        background-color: white;
+        padding: 20px;
+        border: 1px solid black;
+        a {
+            color:black;
+            text-decoration: none;
+        }
+    }
+    button:first-child {
+        margin-left: 0px;
+    }
+}
