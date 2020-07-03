@@ -1,5 +1,4 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
 
 import imageDecoration from '../assets/Decoration.svg';
 import imageSignature from '../assets/Signature.svg';

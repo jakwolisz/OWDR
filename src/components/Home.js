@@ -3,6 +3,8 @@ import HomeHeader from "./HomeHeader";
 import HomeThreeColumns from "./HomeThreeColumns";
 import HomeSimpleSteps from "./HomeSimpleSteps";
 import HomeAboutUs from "./HomeAboutUs";
+import HomeContact from "./HomeContact";
+
 
 const Home = () => {
 
@@ -19,6 +21,9 @@ const Home = () => {
      </section>
      <section id="about_us">
        <HomeAboutUs />
+     </section>
+     <section id="contact">
+       <HomeContact />
      </section>
     </>
   );
