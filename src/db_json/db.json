@@ -1,0 +1,115 @@
+{
+    "fundations": [
+        {
+            "id": 1,
+            "name": "Fundacjom",
+            "desc": "W naszej bazie znajdziesz listę zweryfikowanych Fundacji, z którymi współpracujemy. Możesz sprawdzić czym się zajmują, komu pomagają i czego potrzebują",
+            "items": [
+                {
+                    "name": "Fundacja 'Dbam o Zdrowie' ",
+                    "goal": "Pomóc osobom znajdującym się w trudnej sytuacji życiowej",
+                    "tools": "ubrania, jedzenie, sprzęt AGD, meble, zabawki"
+                },
+                {
+                    "name": "Fundacja 'Dla Dzieci' ",
+                    "goal": "Pomóc dzieciom z ubogich rodzin",
+                    "tools": "ubrania, meble, zabawki"
+                },
+                {
+                    "name": "Fundacja 'Bez Domu' ",
+                    "goal": "Pomóc dla osób nie posiadających miejsca zamieszkania",
+                    "tools": "ubrania, jedzenie, ciepłe koce"
+                },
+                {
+                    "name": "Fundacja 'Dbam o Zdrowie2' ",
+                    "goal": "Pomóc osobom znajdującym się w trudnej sytuacji życiowej",
+                    "tools": "ubrania, jedzenie, sprzęt AGD, meble, zabawki"
+                },
+                {
+                    "name": "Fundacja 'Dla Dzieci2' ",
+                    "goal": "Pomóc dzieciom z ubogich rodzin",
+                    "tools": "ubrania, meble, zabawki"
+                },
+                {
+                    "name": "Fundacja 'Bez Domu2' ",
+                    "goal": "Pomóc dla osób nie posiadających miejsca zamieszkania",
+                    "tools": "ubrania, jedzenie, ciepłe koce"
+                },
+                {
+                    "name": "Fundacja 'Dbam o Zdrowie3' ",
+                    "goal": "Pomóc osobom znajdującym się w trudnej sytuacji życiowej",
+                    "tools": "ubrania, jedzenie, sprzęt AGD, meble, zabawki"
+                },
+                {
+                    "name": "Fundacja 'Dla Dzieci3' ",
+                    "goal": "Pomóc dzieciom z ubogich rodzin",
+                    "tools": "ubrania, meble, zabawki"
+                },
+                {
+                    "name": "Fundacja 'Bez Domu3' ",
+                    "goal": "Pomóc dla osób nie posiadających miejsca zamieszkania",
+                    "tools": "ubrania, jedzenie, ciepłe koce"
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "name": "Organizacjom pozarządowym",
+            "desc": "W naszej bazie znajdziesz listę zweryfikowanych Organizacji, z którymi współpracujemy. Możesz sprawdzić czym się zajmują, komu pomagają i czego potrzebują",
+            "items": [
+                {
+                    "name": "Organizacja 'Dbam o Zdrowie' ",
+                    "goal": "Pomóc osobom znajdującym się w trudnej sytuacji życiowej",
+                    "tools": "ubrania, jedzenie, sprzęt AGD, meble, zabawki"
+                },
+                {
+                    "name": "Organizacja 'Dla Dzieci' ",
+                    "goal": "Pomóc dzieciom z ubogich rodzin",
+                    "tools": "ubrania, meble, zabawki"
+                },
+                {
+                    "name": "Organizacja 'Bez Domu' ",
+                    "goal": "Pomóc dla osób nie posiadających miejsca zamieszkania",
+                    "tools": "ubrania, jedzenie, ciepłe koce"
+                },
+                {
+                    "name": "Organizacja 'Dbam o Zdrowie2' ",
+                    "goal": "Pomóc osobom znajdującym się w trudnej sytuacji życiowej",
+                    "tools": "ubrania, jedzenie, sprzęt AGD, meble, zabawki"
+                },
+                {
+                    "name": "Organizacja 'Dla Dzieci2' ",
+                    "goal": "Pomóc dzieciom z ubogich rodzin",
+                    "tools": "ubrania, meble, zabawki"
+                },
+                {
+                    "name": "Organizacja 'Bez Domu2' ",
+                    "goal": "Pomóc dla osób nie posiadających miejsca zamieszkania",
+                    "tools": "ubrania, jedzenie, ciepłe koce"
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "name": "Lokalnym zbiórkom",
+            "desc": "W naszej bazie znajdziesz listę zweryfikowanych Lokalnych Zbiórek, z którymi współpracujemy. Możesz sprawdzić czym się zajmują, komu pomagają i czego potrzebują",
+            "items": [
+                {
+                    "name": "Zbiorka 'Dbam o Zdrowie' ",
+                    "goal": "Pomóc osobom znajdującym się w trudnej sytuacji życiowej",
+                    "tools": "ubrania, jedzenie, sprzęt AGD, meble, zabawki"
+                },
+                {
+                    "name": "Zbiórka 'Dla Dzieci' ",
+                    "goal": "Pomóc dzieciom z ubogich rodzin",
+                    "tools": "ubrania, meble, zabawki"
+                },
+                {
+                    "name": "Zbiórka 'Bez Domu' ",
+                    "goal": "Pomóc dla osób nie posiadających miejsca zamieszkania",
+                    "tools": "ubrania, jedzenie, ciepłe koce"
+                }
+            ]
+        }
+    ]
+}

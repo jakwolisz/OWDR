@@ -4,6 +4,7 @@ import HomeThreeColumns from "./HomeThreeColumns";
 import HomeSimpleSteps from "./HomeSimpleSteps";
 import HomeAboutUs from "./HomeAboutUs";
 import HomeContact from "./HomeContact";
+import HomeWhoWeHelp from "./HomeWhoWeHelp";
 
 
 const Home = () => {
@@ -21,6 +22,9 @@ const Home = () => {
      </section>
      <section id="about_us">
        <HomeAboutUs />
+     </section>
+     <section id="help">
+       <HomeWhoWeHelp />
      </section>
      <section id="contact">
        <HomeContact />
