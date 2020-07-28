@@ -1,20 +1,27 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import HomeWhoWeHelpNav from "./HomeWhoWeHelpNav";
 
 import imageDecoration from '../assets/Decoration.svg';
+
+import { FirebaseContext } from './Firebase';
 
 const HomeWhoWeHelp = () => {
 
 /////////////FUNDATION ELEMENTS LOGIC////////////////////
 
 const [fundations, setFundations] = useState(null);
-const [currentFundation, setCurrentFundation] = useState(1)
+const firebase = useContext(FirebaseContext);
 
 useEffect(() => {
-  fetch('http://localhost:4000/fundations')
-    .then(response => response.json())
-    .then(fundations => setFundations(fundations))
+  // fetch('http://localhost:4000/fundations')
+  //   .then(response => response.json())
+  //   .then(fundations => setFundations(fundations))
+  firebase.fundations().on('value', snapshot => {
+    setFundations(snapshot.val())
+  })
 }, [])
+
+const [currentFundation, setCurrentFundation] = useState(1)
 
 const fundation = fundations && fundations.find(fund => fund.id == currentFundation)
 
@@ -54,14 +61,14 @@ const renderPageNumbers = pageNumbers.map(number => {
   const CurrentFundationItems = fundation?.items.slice((currentPage - 1) * 3, currentPage * 3 )
 
   const renderCurrentFundationItemsElements = CurrentFundationItems?.map( (item, index) => (
-          <>
+          <div key={index}>
            <div className="element_wrapper_column">
 
             <div className="element_wrapper_row">
-              
+
             <div className="left">
                  <ul>
-                   <li key={index}><span>{item.name}</span><br /><span>{item.goal}</span></li>
+                   <li><span>{item.name}</span><br /><span>{item.goal}</span></li>
                 </ul>
             </div>
             <div className="right">
@@ -72,42 +79,42 @@ const renderPageNumbers = pageNumbers.map(number => {
 
             <hr />
           </div>
-  
-          </>
+
+          </div>
 
   ));
 
 
   return (
       <>
-      <div className="content_wrapper">
-        <p>Komu pomagamy</p>
-        <img alt="Decoration" src={imageDecoration} />
+      <section id="help">
+        <div className="content_wrapper">
+          <p>Komu pomagamy</p>
+          <img alt="Decoration" src={imageDecoration} />
 
 
-        <nav className="help_nav">
-            <ul>
-               {fundations?.map(fun => (<HomeWhoWeHelpNav key={fun.id} id={fun.id} onChoose={onChoose} name={fun.name} />))}
-           </ul>
-        </nav>
+          <nav className="help_nav">
+              <ul>
+                {fundations?.map(fun => (<HomeWhoWeHelpNav key={fun.id} id={fun.id} onChoose={onChoose} name={fun.name} />))}
+            </ul>
+          </nav>
 
-        <div className="help_description">
-            {fundation?.desc}
-        </div>
-      
-        <div className="help_content">
+          <div className="help_description">
+              {fundation?.desc}
+          </div>
 
+          <div className="help_content">
               {renderCurrentFundationItemsElements}
+          </div>    
 
-        </div>    
+          <div className="help_pagination">
+            <ul id="page-numbers">
+              {renderPageNumbers}
+            </ul>
+          </div> 
 
-        <div className="help_pagination">
-          <ul id="page-numbers">
-            {renderPageNumbers}
-          </ul>
-        </div> 
-
-      </div>
+        </div>
+      </section>
     </>
   );
 }

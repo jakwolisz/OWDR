@@ -1,6 +1,8 @@
 import React, {useState} from "react";
 
 import imageDecoration from '../assets/Decoration.svg';
+import imageInstagram from '../assets/Instagram.svg';
+import imageFacebook from '../assets/Facebook.svg';
 
 const API_URL = 'https://fer-api.coderslab.pl/v1/portfolio/contact';
 
@@ -28,17 +30,17 @@ const HomeContact = () => {
     const errors = {};
     let isOk = true;
     if (values.name.length < 2) {
-      errors.name = 'Name should be at least 2 characters long.';
+      errors.name = 'Podane imię jest nieprawidłowe!';
       isOk = false;
     }
 
     if (values.email.length < 3 || !values.email.includes('@')) {
-      errors.email = 'Email should be valid.';
+      errors.email = 'Podaj prawidłowy mail!';
       isOk = false;
     }
 
     if (values.message.length < 120) {
-      errors.message = 'Message should be at least 120 characters long.';
+      errors.message = 'Wiadomość musi mieć conajmniej 120 znaków!';
       isOk = false;
     }
 
@@ -60,58 +62,61 @@ const HomeContact = () => {
 
   return (
       <>
-      <div className="contact_section_left">
-      </div>
-      <div className="contact_section_right">
-      <div className="content_wrapper">
+      <section id="contact">
+        <div className="contact_section">
+          <div className="contact_content_wrapper">
+
               <p>Skontaktuj się z nami</p>
               <img alt="decoration" src={imageDecoration} />
-              {errorMessages.name && <div className="alert alert-danger">{errorMessages.name}</div>} 
-              {errorMessages.email && <div className="alert alert-danger">{errorMessages.email}</div>} 
-              {errorMessages.message && <div className="alert alert-danger">{errorMessages.message}</div>}
-      <form onSubmit={handleSubmit}>
-        <label>
-          Imię:
-          <input
-            type="text"
-            className="form-control"
-            value={values.name}
-            name="name"
-            onChange={handleChange}
-          />
-        </label>
+              {status === 'success' && <p className="success">Wiadomość została wysłana! Wkrótce się z Tobą skontaktujemy!</p>}
 
-        <label>
-          Email:
-          <input
-            type="Email"
-            className="form-control"
-            value={values.email}
-            name="email"
-            onChange={handleChange}
-          />
-        </label>
+            <form onSubmit={handleSubmit}>
+              <div className="contact_form_upper_part">
+                <div className="name">
+                  <label>Imię:</label>
+                  <input type="text" 
+                    value={values.name} 
+                    name="name" 
+                    onChange={handleChange} 
+                  />
+                  {errorMessages.name && <p className="alert">{errorMessages.name}</p>} 
+                </div>
+                <div className="email">
+                  <label>Email:</label>
+                  <input
+                    type="Email"
+                    value={values.email}
+                    name="email"
+                    onChange={handleChange}
+                  />
+                  {errorMessages.email && <p className="alert">{errorMessages.email}</p>} 
+                </div>
+              </div>
 
-        <label>
-          Treść wiadomości:
-          <textarea
-            className="form-control"
-            value={values.message}
-            name="message"
-            onChange={handleChange}
-          ></textarea>
-        </label>
+              <div className="message">
+              <label>Treść wiadomości:</label>
+                <textarea
+                    value={values.message}
+                    name="message"
+                    placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                    onChange={handleChange}
+                ></textarea>
+                {errorMessages.message && <p className="alert">{errorMessages.message}</p>}
+              </div>
+              
+              <button type="submit">Wyślij</button>
 
-        <button className="btn btn-primary" type="submit">
-          Wyślij
-        </button>
-      </form>
-
-      {status === 'success' && <div className="alert alert-success">Operation completed!</div>}
+            </form>
           </div>
-      </div>
+        </div>
+
+        <div className="contact_section_footer">
+            <img alt="facebook" src={imageFacebook} />
+            <img alt="instagram" src={imageInstagram} />
+        </div>
+      </section>
       </>
   );
 };
 
-export  default HomeContact;
+export default HomeContact;

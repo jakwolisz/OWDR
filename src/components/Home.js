@@ -6,29 +6,16 @@ import HomeAboutUs from "./HomeAboutUs";
 import HomeContact from "./HomeContact";
 import HomeWhoWeHelp from "./HomeWhoWeHelp";
 
-
 const Home = () => {
 
   return (
     <>
-    <section className="header">
     <HomeHeader />
-    </section>
-     <section id="three_columns">
-     <HomeThreeColumns />
-     </section>
-     <section id="simple_steps">
-       <HomeSimpleSteps />
-     </section>
-     <section id="about_us">
-       <HomeAboutUs />
-     </section>
-     <section id="help">
-       <HomeWhoWeHelp />
-     </section>
-     <section id="contact">
-       <HomeContact />
-     </section>
+    <HomeThreeColumns />
+    <HomeSimpleSteps />
+    <HomeAboutUs />
+    <HomeWhoWeHelp />
+    <HomeContact />
     </>
   );
 };

@@ -1,0 +1,94 @@
+.login {
+    width: 400px;
+    margin: 0px auto;
+    font-size: 16px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+  }
+  
+  /* Reset top and bottom margins from certain elements */
+  .login-header,
+  .login p {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  
+  .login-header {
+    padding: 20px;
+    font-size: 1.4em;
+    font-weight: normal;
+    text-align: center;
+    text-transform: uppercase;
+
+  }
+  
+  .login-container {
+    background: #ebebeb;
+    padding: 40px;
+    a {
+        color: #444;
+        text-decoration: none;
+        background: white;
+        border: 1px solid black;
+        display: block;
+        padding: 16px;
+        cursor: pointer;
+    }
+    a:hover {
+        color: #666;
+    }
+  }
+  
+  /* Every row inside .login-container is defined with p tags */
+  .login p {
+    padding: 12px;
+  }
+  
+  .login input {
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    border-width: 1px;
+    border-style: solid;
+    padding: 16px;
+    outline: 0;
+    font-family: inherit;
+    font-size: 0.95em;
+  }
+  label {
+      text-align: left;
+  }
+  
+  .login input[type="email"],
+  .login input[type="password"],
+  .login input[type="text"] {
+    background: #ebebeb;
+    border: 0px;
+    border-bottom: 1px solid #bbb;
+    color: #555;
+  }
+  
+  /* Text fields' focus effect */
+  .login input[type="email"]:focus,
+  .login input[type="password"]:focus,
+  .login input[type="text"]:focus {
+    border-color: #888;
+  }
+  
+  .login input[type="submit"] {
+    background: white;
+    border: 1px solid black;
+    cursor: pointer;
+  }
+  
+  .login input[type="submit"]:hover {
+    color: #555;
+  }
+  
+  /* Buttons' focus effect */
+  .login input[type="submit"]:focus {
+    color: #888;
+  }

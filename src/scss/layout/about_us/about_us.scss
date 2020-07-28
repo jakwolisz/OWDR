@@ -4,6 +4,31 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    .content_wrapper {
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        p:first-child {
+            font-size: 30px;
+            text-align: center;
+        }
+
+        > p {
+            font-size: 25px;
+            text-align: center;
+        }
+    
+        img {
+            margin: 30px 0 20px 0;
+        }
+
+        img.signature {
+            margin: 30px 0 20px 0;
+            align-self: flex-end;
+        }
+    }
 }
 
 .about_section_right, .about_section_left {
@@ -16,15 +41,9 @@
 
 
 .about_section_left {
+    box-sizing: border-box;
+    padding: 50px 0;
     background-color: $whitish_color;
-}
-
-.content_wrapper {
-    width: 40%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
 }
 
 .about_section_right {

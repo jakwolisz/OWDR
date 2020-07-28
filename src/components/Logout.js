@@ -1,19 +1,23 @@
 import React from "react";
-import User from "./User";
-import Navigation from "./Navigation";
+import { NavLink } from "react-router-dom";
+import imageDecoration from '../assets/Decoration.svg';
 
 
 const Logout = () => {
 
   return (
     <>
-    <div className="navigation_wrapper">
-      <User />
-      <Navigation />
-    </div>
-    .....................
-      TU BĘDZIE LOGOUT
-      .....................
+    
+    <section id="logout">
+      <div className="logout_wrapper">
+          <p>Wylogowanie nastąpiło pomyślnie</p>
+          <img alt="decoration" src={imageDecoration} />
+          <ul>
+            <li><NavLink to="/">Główna</NavLink></li>
+          </ul>
+        </div>
+    </section>
+
     </>
   );
 };

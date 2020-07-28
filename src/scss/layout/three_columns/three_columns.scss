@@ -1,6 +1,5 @@
 #three_columns {
     width: 100%;
-    height: 384px;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -10,6 +9,7 @@
 .column {
     width: 20vw;
     height: 100%;
+    padding: 30px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -40,4 +40,16 @@
         font-weight: 300;
         color: $greyish_dark_color;
     }
+}
+
+@media (max-width: 1000px) {
+
+    #three_columns {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    }
+
 }
