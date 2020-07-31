@@ -26,9 +26,8 @@ const Register = () => {
 
   const handleSubmit = e => {
     e.preventDefault();
-
     const errors = {};
-
+    
     if (values.email.length < 3 || !values.email.includes('@')) {
       errors.email = 'Podany email jest nieprawidłowy';
     }
@@ -44,29 +43,24 @@ const Register = () => {
     setErrorMessages(errors);
 
     if (Object.keys(errors).length === 0) {
-
-    firebase.doCreateUserWithEmailAndPassword(values.email, values.password)
-      .then(() => {
-        setValues(prevValues => ({
-          ...prevValues,
-          email: "",
-          password: "",
-          password_2: ""
-        }));
-        history.push('/');
-      })
-      .catch(errorek => {
-        setServerError(errorek.message)
-      });
+      firebase.doCreateUserWithEmailAndPassword(values.email, values.password)
+        .then(() => {
+          setValues(prevValues => ({
+            ...prevValues,
+            email: "",
+            password: "",
+            password_2: ""
+          }));
+          history.push('/');
+        })
+        .catch(errorek => {
+          setServerError(errorek.message)
+        });
     }
-
   };
-
-
 
   return (
     <>
-
     <div className="login">
   
     <h2 className="login-header">Załóż konto</h2>
@@ -104,7 +98,6 @@ const Register = () => {
             />
       </p>
       {errorMessages.password_2 && <p>{errorMessages.password_2}</p>}
-
       <p><input type="submit" value="Załóż konto" /></p>
       <p><NavLink to="/logowanie">Zaloguj</NavLink></p>
       <p><NavLink to="/">Główna</NavLink></p>

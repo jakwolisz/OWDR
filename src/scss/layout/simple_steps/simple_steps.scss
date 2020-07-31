@@ -12,9 +12,29 @@
             margin: 20px 0 0 0;
         }
     }
-
     .buttons_container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
         padding: 30px;
+        button {
+            width: 200px;
+            font-size: 25px;
+            margin-left: 20px;
+            background-color: white;
+            padding: 20px;
+            border: 1px solid black;
+            a {
+                color:black;
+                text-decoration: none;
+            }
+        }
+        button:first-child {
+            margin-left: 0px;
+        }
+        button:hover {
+            background-color: $yellowish_color;
+        }
     }
 }
 

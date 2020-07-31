@@ -6,7 +6,7 @@ import imageFacebook from '../assets/Facebook.svg';
 
 const API_URL = 'https://fer-api.coderslab.pl/v1/portfolio/contact';
 
-const HomeContact = () => {
+const Contact = () => {
   const [values, setValues] = useState({
     name: '',
     email: '',
@@ -119,4 +119,4 @@ const HomeContact = () => {
   );
 };
 
-export default HomeContact;
+export default Contact;

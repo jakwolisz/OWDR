@@ -1,7 +1,10 @@
 @import "./settings/reset";
 @import "./settings/fonts";
 @import "./settings/colors";
+@import "./settings/mixins";
 
+@import "./layout/navigation/navigation";
+@import "./layout/give/give";
 @import "./layout/header/header";
 @import "./layout/three_columns/three_columns";
 @import "./layout/simple_steps/simple_steps";
@@ -9,8 +12,6 @@
 @import "./layout/contact/contact";
 @import "./layout/help/help";
 @import "./layout/login/login";
-@import "./layout/give_things/give_things";
-@import "./layout/give_header/give_header";
 @import "./layout/logout/logout";
 
 

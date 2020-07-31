@@ -1,7 +1,7 @@
 import React, { useContext, useState, useEffect } from 'react';
 import { NavLink, useHistory } from 'react-router-dom';
 
-import { FirebaseContext } from './Firebase';
+import { FirebaseContext } from '../Firebase';
 
 const User = () => {
   const firebase = useContext(FirebaseContext);
@@ -16,16 +16,17 @@ const User = () => {
     });
   });
 
-    const signOut = () => {
-      firebase.doSignOut();
-      history.push("/wylogowano")
-    }
+  const signOut = () => {
+    firebase.doSignOut();
+    history.push("/wylogowano")
+  }
+
 
   const NavigationAuth = () => (
 
     <nav className="user_nav">
     <ul>
-      <li>Cześć {authUser.email}</li>
+      <li>Cześć, {authUser.email}</li>
       <li><NavLink to="/oddaj-rzeczy">Oddaj Rzeczy</NavLink></li>
       <li onClick={signOut}>Wyloguj się</li>
     </ul>

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
-import Navigation from './Navigation';
-import User from './User';
+import Navigation from './Navigation/Navigation';
+import User from './Navigation/User';
 
 import imageDecoration from '../assets/Decoration.svg';
 import imageIks from '../assets/iks.svg';

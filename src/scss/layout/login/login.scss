@@ -9,7 +9,6 @@
     height: 100vh;
   }
   
-  /* Reset top and bottom margins from certain elements */
   .login-header,
   .login p {
     margin-top: 0;
@@ -42,7 +41,6 @@
     }
   }
   
-  /* Every row inside .login-container is defined with p tags */
   .login p {
     padding: 12px;
   }
@@ -71,7 +69,6 @@
     color: #555;
   }
   
-  /* Text fields' focus effect */
   .login input[type="email"]:focus,
   .login input[type="password"]:focus,
   .login input[type="text"]:focus {
@@ -88,7 +85,6 @@
     color: #555;
   }
   
-  /* Buttons' focus effect */
   .login input[type="submit"]:focus {
     color: #888;
   }

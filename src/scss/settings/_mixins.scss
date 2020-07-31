@@ -1,0 +1,16 @@
+
+
+%button {
+    font-weight: lighter;
+    font-size: 1em;
+    color: black;
+    border: 0.75px solid $greyish_dark_color;
+    background-color: transparent;
+    cursor: pointer;
+    width: 150px;
+    padding: 20px;
+  
+    &:hover {
+      background-color: $yellowish_color;
+    }
+  }

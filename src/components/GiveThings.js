@@ -1,21 +1,15 @@
 import React from "react";
-import HomeContact from "./HomeContact";
-import GiveThingsOut from "./GiveThingsOut";
+import Contact from "./Contact";
 import GiveHeader from "./GiveHeader";
+import MasterForm from "./MasterForm";
 
 const GiveThings = () => {
 
   return (
     <>
-    <section id="give_header">
-    <GiveHeader />
-    </section>
-     <section id="give_things">
-     <GiveThingsOut />
-     </section>     
-     <section id="contact">
-       <HomeContact />
-     </section>
+     <GiveHeader />
+     <MasterForm />   
+     <Contact />
     </>
   );
 };

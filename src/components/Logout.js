@@ -7,7 +7,6 @@ const Logout = () => {
 
   return (
     <>
-    
     <section id="logout">
       <div className="logout_wrapper">
           <p>Wylogowanie nastąpiło pomyślnie</p>
@@ -17,7 +16,6 @@ const Logout = () => {
           </ul>
         </div>
     </section>
-
     </>
   );
 };
