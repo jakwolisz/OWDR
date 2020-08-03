@@ -1,12 +1,13 @@
-import React, {useState} from "react";
+import React, {useState, useContext} from "react";
 
 import imageDecoration from '../assets/Decoration.svg';
 import imageInstagram from '../assets/Instagram.svg';
 import imageFacebook from '../assets/Facebook.svg';
 
-const API_URL = 'https://fer-api.coderslab.pl/v1/portfolio/contact';
+import { FirebaseContext } from './Firebase';
 
 const Contact = () => {
+  const firebase = useContext(FirebaseContext);
   const [values, setValues] = useState({
     name: '',
     email: '',
@@ -26,7 +27,7 @@ const Contact = () => {
 
   const handleSubmit = e => {
     e.preventDefault();
-
+    setStatus(null);
     const errors = {};
     let isOk = true;
     if (values.name.length < 2) {
@@ -47,16 +48,13 @@ const Contact = () => {
     setErrorMessages(errors);
 
     if (isOk) {
-      fetch(API_URL, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(values),
-      })
-        .then(response => response.json())
-        .then(data => {setStatus(data.status); console.log(data, data.status)})
-        .catch(error => console.log('Error: ', error));
+        firebase.message().push().set(values);
+        setStatus("Wiadomość została wysłana! Wkrótce się z Tobą skontaktujemy!");
+        setValues({
+          name: '',
+          email: '',
+          message: '',
+        });
     }
   };
 
@@ -68,7 +66,7 @@ const Contact = () => {
 
               <p>Skontaktuj się z nami</p>
               <img alt="decoration" src={imageDecoration} />
-              {status === 'success' && <p className="success">Wiadomość została wysłana! Wkrótce się z Tobą skontaktujemy!</p>}
+              {status && <p className="success">{status}</p>}
 
             <form onSubmit={handleSubmit}>
               <div className="contact_form_upper_part">

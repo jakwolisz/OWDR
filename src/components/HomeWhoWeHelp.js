@@ -13,9 +13,6 @@ const [fundations, setFundations] = useState(null);
 const firebase = useContext(FirebaseContext);
 
 useEffect(() => {
-  // fetch('http://localhost:4000/fundations')
-  //   .then(response => response.json())
-  //   .then(fundations => setFundations(fundations))
   firebase.fundations().on('value', snapshot => {
     setFundations(snapshot.val())
   })

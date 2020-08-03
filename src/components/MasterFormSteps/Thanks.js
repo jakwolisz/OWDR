@@ -9,8 +9,10 @@ const Thanks = ({currentStep}) => {
  
     return (
         <>
-        <h2>Dziękujemy za przesłanie formularza. Na maila prześlemy wszelkie informacje o odbiorze.</h2>
-        <img alt="decoration" src={imageDecoration} />
+        <div className="thanks">
+            <h2>Dziękujemy za przesłanie formularza. Na maila prześlemy wszelkie informacje o odbiorze.</h2>
+            <img alt="decoration" src={imageDecoration} />
+        </div>
         </>
     )
 }

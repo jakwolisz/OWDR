@@ -36,13 +36,17 @@ doPasswordReset = email => this.auth.sendPasswordResetEmail(email);
 doPasswordUpdate = password =>
     this.auth.currentUser.updatePassword(password);
 
-    // *** User API ***
- 
-  user = uid => this.db.ref(`users/${uid}`);
- 
-  users = () => this.db.ref('users');
+  // *** Fundations API Endpoint ***
 
   fundations = () => this.db.ref('fundations');
+
+  // *** Contact Form message API Endpoint ***
+
+  message = () => this.db.ref('message');
+
+  // *** Share Form API Endpoint ***
+
+  share = () => this.db.ref('share');
 
 }
  

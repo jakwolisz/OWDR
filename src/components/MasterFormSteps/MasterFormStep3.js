@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 
 const MasterFormStep3 = ({currentStep, form, handleChange, checkbox}) => {
 
@@ -76,7 +76,6 @@ const MasterFormStep3 = ({currentStep, form, handleChange, checkbox}) => {
             <label htmlFor="message">Wpisz nazwę konkretnej organizacji (opcjonalnie)</label>
             <input 
             id="message"
-            className="message"
             type="text"
             name="organizationSpecific"
             value={form.organizationSpecific}

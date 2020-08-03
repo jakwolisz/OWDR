@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import MasterFormStep1 from "./MasterFormSteps/MasterFormStep1";
 import MasterFormStep2 from "./MasterFormSteps/MasterFormStep2";
 import MasterFormStep3 from "./MasterFormSteps/MasterFormStep3";
@@ -6,8 +6,11 @@ import MasterFormStep4 from "./MasterFormSteps/MasterFormStep4";
 import Summary from "./MasterFormSteps/Summary";
 import Thanks from "./MasterFormSteps/Thanks";
 
+import { FirebaseContext } from './Firebase';
+
 const MasterForm = () => {
- 
+      const firebase = useContext(FirebaseContext);
+      const [error, setError] = useState({});
       const [formState, updateformState] = useState({
         currentStep: 1, // Default is Step 1
         options: 
@@ -17,8 +20,33 @@ const MasterForm = () => {
                     localization: "",
                     help: "",
                     organizationSpecific: "",
-                }  
-      }) 
+                    street: "",
+                    city: "",
+                    postCode: "",
+                    phoneNumber: "",
+                    date: "",
+                    time: "",
+                    note: ""
+                }}); 
+
+      const validation = () => {
+      const regPostCode = /^[0-9]{2}-[0-9]{3}$/;
+      const regPhone = /^[0-9]{9}$/;
+      const errors = {};
+      errors.street =
+        formState?.options.street.length < 2 ? "Podana ulica jest nieprawidłowa!" : "";
+      errors.city =
+        formState?.options.city.length < 2 ? "Podane miasto jest nieprawidłowe!" : "";
+      errors.postCode = regPostCode.test(formState?.options.postCode)
+        ? ""
+        : "Podany kod pocztowy jest nieprawidłowy!";
+      errors.phone = regPhone.test(formState?.options.phoneNumber)
+        ? ""
+        : "Podany numer jest nieprawidłowy!";
+      const isError = Object.values(errors).findIndex((err) => err?.length) > -1;
+      setError(errors);
+      return isError;
+    };
     
 
     const handleChange = e => {
@@ -58,7 +86,6 @@ const MasterForm = () => {
       };
 
       console.log(formState.options)
-      console.log(formState)
 
     const next = () => {
 
@@ -74,6 +101,11 @@ const MasterForm = () => {
             currentStep: formState.currentStep + 1,
         }))
         }
+    }
+
+    const next_validated = () => {
+      if (validation()) return;
+      next();
     }
 
     const prev = () => {
@@ -92,10 +124,10 @@ const MasterForm = () => {
             }
     }
 
+
     const submit = (e) => {
       e.preventDefault();
-      // const newShare = firebase.shareData.push();
-      // newShare.set(form);
+      firebase.share().push().set(formState.options);
       updateformState(prevValues => ({
         ...prevValues,
         currentStep: 6,
@@ -116,14 +148,21 @@ const MasterForm = () => {
 
       const NextButton = () => {
 
-        if(formState.currentStep <= 4){
+        if(formState.currentStep < 4){
           return (
             <button type="button" onClick={next}>
               Dalej
             </button>        
           )
         }
-        else if(formState.currentStep == 5){
+        else if(formState.currentStep === 4){
+          return (
+            <button type="button" onClick={next_validated}>
+              Dalej
+            </button>        
+          )
+        }
+        else if(formState.currentStep === 5){
           return (
             <button type="button" onClick={submit}>
               Potwierdzam
@@ -206,17 +245,18 @@ const MasterForm = () => {
           /> 
           <MasterFormStep4
             currentStep={formState.currentStep}
+            form={formState.options}
+            error={error}
             handleChange={handleChange}
           />      
         </form>
-        <div className="summary">
           <Summary
-            currentStep={formState.currentStep} 
+            currentStep={formState.currentStep}
+            form={formState.options}
           />   
           <Thanks
             currentStep={formState.currentStep} 
           />
-        </div>
         <div className="master_form_buttons">
           <PreviousButton />
           <NextButton />
