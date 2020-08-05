@@ -1,7 +1,7 @@
 # ODDAM W DOBRE RĘCE SITE
 * [About](#about)
 * [Technologies](#technologies)
-* [Instalation](#-installation)
+* [Installation](#-installation)
 ## About
 This site's goal is to create place, where everyone could give unused belongings to trusted institutions.
 
