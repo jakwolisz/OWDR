@@ -1,11 +1,11 @@
 # ODDAM W DOBRE RĘCE SITE
 * [About](#about)
 * [Technologies](#technologies)
-* [Instalation locally](#-instalation-locally)
+* [Instalation](#instalation)
 ## About
 This site's goal is to create place, where everyone could give unused belongings to trusted institutions.
 
-Here will be site's url: xxx
+OWDR SITE: [CLICK](https://jakwolisz.github.io/owdr/)
 
 ## Technologies
 
@@ -14,8 +14,9 @@ Project is created with:
 - JS 
 - HTML
 - SCSS
+- FIREBASE
 
-## 🔧 Installation locally
+## 🔧 Installation
 
 ``bash
 
