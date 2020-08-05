@@ -21,12 +21,12 @@ const HomeHeader = () => {
       <nav className="desktop_menu">
           <User />
           <Navigation />
-          <img className={isActive ? "hamburgerButton hidden" : "hamburgerButton"} src={imageHamburger} onClick={visibilityChange} />
+          <img alt="hamburger" className={isActive ? "hamburgerButton hidden" : "hamburgerButton"} src={imageHamburger} onClick={visibilityChange} />
       </nav>
       <nav className={!isActive ? "mobile_menu hidden": "mobile_menu"}>
           <User />
           <Navigation />
-          <img className={!isActive ? "iksButton hidden" : "iksButton"} src={imageIks} onClick={visibilityChange} />
+          <img alt="iks" className={!isActive ? "iksButton hidden" : "iksButton"} src={imageIks} onClick={visibilityChange} />
       </nav>
       <div className={isActive ? "main_section hidden" : "main_section"}>
           <div className="content">

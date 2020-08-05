@@ -8,7 +8,7 @@ import { FirebaseContext } from './Firebase';
 const HomeWhoWeHelp = () => {
 const firebase = useContext(FirebaseContext);
 const [fundations, setFundations] = useState(null);
-console.log(fundations)
+
 useEffect(() => {
   firebase.fundations().on('value', snapshot => {
     setFundations(snapshot.val())
@@ -23,7 +23,7 @@ useEffect(() => {
 const [currentPage, setCurrentPage] = useState(1);
 const [currentFundation, setCurrentFundation] = useState(1);
 
-const fundation = fundations && fundations.find(fund => fund.id == currentFundation);
+const fundation = fundations && fundations.find(fund => fund.id === currentFundation);
 
 const handleClick = e => {
   setCurrentPage(e.target.id);
@@ -37,8 +37,8 @@ for (let i = 1; i <= fundation?.items.length / itemsPerPage; i++) {
 }
 
 const renderPageNumbers = pageNumbers.map(number => { 
-  if (pageNumbers.length == 1) {
-    return
+  if (pageNumbers.length === 1) {
+    return null;
   }
   else {
     return (
