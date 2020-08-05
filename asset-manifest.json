@@ -1,0 +1,33 @@
+{
+  "files": {
+    "main.css": "/owdr/static/css/main.d0962ac6.chunk.css",
+    "main.js": "/owdr/static/js/main.afd1566f.chunk.js",
+    "main.js.map": "/owdr/static/js/main.afd1566f.chunk.js.map",
+    "runtime-main.js": "/owdr/static/js/runtime-main.e48f4128.js",
+    "runtime-main.js.map": "/owdr/static/js/runtime-main.e48f4128.js.map",
+    "static/js/2.3f9c9ccb.chunk.js": "/owdr/static/js/2.3f9c9ccb.chunk.js",
+    "static/js/2.3f9c9ccb.chunk.js.map": "/owdr/static/js/2.3f9c9ccb.chunk.js.map",
+    "index.html": "/owdr/index.html",
+    "precache-manifest.76ead71946b45bc3117649ff1792b99d.js": "/owdr/precache-manifest.76ead71946b45bc3117649ff1792b99d.js",
+    "service-worker.js": "/owdr/service-worker.js",
+    "static/css/main.d0962ac6.chunk.css.map": "/owdr/static/css/main.d0962ac6.chunk.css.map",
+    "static/js/2.3f9c9ccb.chunk.js.LICENSE.txt": "/owdr/static/js/2.3f9c9ccb.chunk.js.LICENSE.txt",
+    "static/media/main.scss": "/owdr/static/media/People.6fa36651.jpg",
+    "static/media/Decoration.svg": "/owdr/static/media/Decoration.2290784e.svg",
+    "static/media/Facebook.svg": "/owdr/static/media/Facebook.df65b6c0.svg",
+    "static/media/Icon-1.svg": "/owdr/static/media/Icon-1.91147906.svg",
+    "static/media/Icon-2.svg": "/owdr/static/media/Icon-2.db91e33e.svg",
+    "static/media/Icon-3.svg": "/owdr/static/media/Icon-3.2cfe9dfe.svg",
+    "static/media/Icon-4.svg": "/owdr/static/media/Icon-4.436df0aa.svg",
+    "static/media/Instagram.svg": "/owdr/static/media/Instagram.703479fd.svg",
+    "static/media/Signature.svg": "/owdr/static/media/Signature.e54cfcfc.svg",
+    "static/media/hamburger_menu.svg": "/owdr/static/media/hamburger_menu.42aa5dbd.svg",
+    "static/media/iks.svg": "/owdr/static/media/iks.6ac2912e.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e48f4128.js",
+    "static/js/2.3f9c9ccb.chunk.js",
+    "static/css/main.d0962ac6.chunk.css",
+    "static/js/main.afd1566f.chunk.js"
+  ]
+}
