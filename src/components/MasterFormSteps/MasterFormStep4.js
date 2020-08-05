@@ -28,7 +28,7 @@ const MasterFormStep4 = ({currentStep, form, error, handleChange}) => {
                             value={form.street}
                             onChange={handleChange}
                             />
-                            <p>{error.street}</p>
+                            <p className="error">{error.street}</p>
                         </td>
                     </tr>
                     <tr>
@@ -43,7 +43,7 @@ const MasterFormStep4 = ({currentStep, form, error, handleChange}) => {
                             value={form.city}
                             onChange={handleChange}
                             />
-                             <p>{error.city}</p>
+                             <p className="error">{error.city}</p>
                         </td>
                     </tr>
                     <tr>
@@ -58,7 +58,7 @@ const MasterFormStep4 = ({currentStep, form, error, handleChange}) => {
                             value={form.postCode}
                             onChange={handleChange}
                             />
-                            <p>{error.postCode}</p>
+                            <p className="error">{error.postCode}</p>
                         </td>
                     </tr>
                     <tr>
@@ -73,7 +73,7 @@ const MasterFormStep4 = ({currentStep, form, error, handleChange}) => {
                             value={form.phoneNumber}
                             onChange={handleChange}
                             />
-                             <p>{error.phone}</p>
+                             <p className="error">{error.phone}</p>
                         </td>
                     </tr>
                     </tbody>

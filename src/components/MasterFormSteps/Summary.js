@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import imageIcon1 from '../../assets/Icon-1.svg';
 import imageIcon2 from '../../assets/Icon-4.svg';
 
@@ -11,7 +11,7 @@ const Summary = ({currentStep, form}) => {
     return (
         <>
         <div className="summary">
-            <h2>Podsumowanie twojej darowizny</h2>
+            <strong>Podsumowanie twojej darowizny</strong>
             <h3>Oddajesz:</h3>
             <div className="upper-part-1">
                             <div>
@@ -41,7 +41,7 @@ const Summary = ({currentStep, form}) => {
                                 <label>Ulica:</label>
                             </td>
                             <td>
-                                {form.street}
+                                <label>{form.street}</label>
                             </td>
                         </tr>
                         <tr>
@@ -49,7 +49,7 @@ const Summary = ({currentStep, form}) => {
                                 <label>Miasto:</label>
                             </td>
                             <td>
-                                {form.city}
+                                <label>{form.city}</label>
                             </td>
                         </tr>
                         <tr>
@@ -57,7 +57,7 @@ const Summary = ({currentStep, form}) => {
                                 <label>Kod pocztowy:</label>
                             </td>
                             <td>
-                                {form.postCode}
+                                <label>{form.postCode}</label>
                             </td>
                         </tr>
                         <tr>
@@ -65,7 +65,7 @@ const Summary = ({currentStep, form}) => {
                                 <label>Numer telefonu:</label>
                             </td>
                             <td>
-                                {form.phoneNumber}
+                                <label>{form.phoneNumber}</label>
                             </td>
                         </tr>
                         </tbody>
@@ -82,7 +82,7 @@ const Summary = ({currentStep, form}) => {
                                 <label>Data:</label>
                             </td>
                             <td>
-                                {form.date}
+                                <label>{form.date}</label>
                             </td>
                         </tr>
                         <tr>
@@ -90,7 +90,7 @@ const Summary = ({currentStep, form}) => {
                                 <label>Godzina:</label>
                             </td>
                             <td>
-                                {form.time}
+                                <label>{form.time}</label>
                             </td>
                         </tr>
                         <tr>
@@ -98,7 +98,7 @@ const Summary = ({currentStep, form}) => {
                                 <label>Uwagi dla kuriera:</label>
                             </td>
                             <td>
-                            {form.note}
+                                <label>{form.note}</label>
                             </td>
                         </tr>
                         </tbody>

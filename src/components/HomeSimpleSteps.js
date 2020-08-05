@@ -53,7 +53,7 @@ const HomeSimpleSteps = () => {
             </ul>
          </div>
          <div className="buttons_container">
-               <button><NavLink to="/logowanie">ODDAJ RZECZY</NavLink></button>
+            <button><NavLink to="/logowanie">ODDAJ RZECZY</NavLink></button>
          </div>
       </section>
     </>
