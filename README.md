@@ -1,11 +1,11 @@
-# ODDAM W DOBRE RĘCE SITE
+# IN GOOD HANDS WEBSITE
 * [About](#about)
 * [Technologies](#technologies)
 * [Installation](#-installation)
 ## About
 This site's goal is to create place, where everyone could give unused belongings to trusted institutions.
 
-OWDR SITE: [CLICK](https://jakwolisz.github.io/owdr/)
+IN GOOD HANDS SITE: [CLICK](https://jakwolisz.github.io/owdr/)
 
 ## Technologies
 
